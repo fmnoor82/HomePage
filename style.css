@@ -1,0 +1,147 @@
+.c-site-header { 
+  color: white;
+  background-color: black;
+  padding: 20px;
+  font-family: Arial;
+  font-size: 10pt;
+  text-align: center;
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "image-1 image-2 image-3 image-4";
+  grid-gap: 10px;
+}
+
+.grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: red;
+}
+
+.grid-container > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-1 {
+  grid-area: image-1;
+  transition: all 0.2s ease-in-out;
+}
+
+.image-1:hover {
+  transform: scale(1.1);
+}
+.image-2 {
+  grid-area: image-2;
+}
+
+.image-2:hover {
+  transform: rotate(45deg);
+  background-image: url("https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
+.image-2:hover .second-image {
+  display: inline;
+}
+.second-image {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+.image-3 {
+  grid-area: image-3;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation: swinging 4.5s ease-in-out forwards infinite;
+  animation: swinging 4.5s ease-in-out forwards infinite;
+}
+
+.image-3:hover {
+  animation-play-state: paused;
+}
+
+.image-4 {
+  grid-area: image-4;
+  opacity: 0.2;
+}
+
+.image-4:hover {
+  opacity: 1;
+}
+
+@keyframes swinging {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+
+section {
+  color: black;
+  margin: 10px;
+  padding:10px;
+  height: 100%;
+  background-color:lavender;
+  font-family: Arial;
+  font-size: 14pt;
+  text-align: left;
+  box-shadow: 10px 10px 5px DarkGrey;
+}
+
+label {
+  color: blue;
+  cursor: pointer;
+}
+
+h3 {
+  font-variant: small-caps;
+  color: steelBlue;
+}
+
+.center {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 30%;
+}
+
+.middle {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 30%;
+}
+
+.c-site-footer { 
+  background-color: grey;
+  margin: 20px;
+  padding:20px;
+  text-align:center;
+  color: white;
+  
+}
+
+button {
+  margin:10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
